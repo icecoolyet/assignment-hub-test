@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Clock, Send, CloudUpload, FileText, CheckCircle2, X, Download } from 'lucide-react';
+import { Send, CloudUpload, FileText, CheckCircle2, X, Download } from 'lucide-react';
 
 export function StudentDashboard() {
   return (
@@ -104,7 +104,7 @@ export function StudentDashboard() {
   );
 }
 
-function TaskCard({ title, subject, status, statusColor, accentColor, timeLabel, timeValue, isActive, isCompleted }: any) {
+function TaskCard({ title, subject, status, statusColor, accentColor, timeLabel, timeValue, isActive, isCompleted }) {
   return (
     <div className={`bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group relative overflow-hidden border border-outline-variant/10 ${isActive ? 'ring-2 ring-secondary/20' : ''}`}>
       <div className={`absolute top-0 left-0 w-1.5 h-full ${accentColor}`}></div>

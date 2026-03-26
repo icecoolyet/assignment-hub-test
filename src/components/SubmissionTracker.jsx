@@ -1,12 +1,8 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Download, FileText, Archive, ChevronLeft, Save, Share2 } from 'lucide-react';
+import { Download, Save, Share2, ChevronLeft } from 'lucide-react';
 
-interface SubmissionTrackerProps {
-  onBack: () => void;
-}
-
-export function SubmissionTracker({ onBack }: SubmissionTrackerProps) {
+export function SubmissionTracker({ onBack }) {
   const students = [
     { id: '64010021', name: 'ปิยบุตร เก่งกาจ', time: '12 ก.ค. 2567, 23:45', status: 'ตรงเวลา', statusColor: 'bg-tertiary/20 text-tertiary', file: 'CS302_HW1.zip', score: 0, initial: 'PK' },
     { id: '64010045', name: 'นวพร ตั้งใจเรียน', time: '13 ก.ค. 2567, 08:12', status: 'ส่งช้า (8 ชม.)', statusColor: 'bg-error/10 text-error', file: 'DB_Draft_Final.pdf', score: 18, initial: 'NT' },

@@ -2,11 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { PlusCircle, UploadCloud, Palette, MousePointer2, FileText, Calendar, GraduationCap } from 'lucide-react';
 
-interface TeacherDashboardProps {
-  onViewTracker: () => void;
-}
-
-export function TeacherDashboard({ onViewTracker }: TeacherDashboardProps) {
+export function TeacherDashboard({ onViewTracker }) {
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -146,7 +142,7 @@ export function TeacherDashboard({ onViewTracker }: TeacherDashboardProps) {
   );
 }
 
-function AssignmentItem({ title, desc, date, score, status, statusColor, icon, onClick }: any) {
+function AssignmentItem({ title, desc, date, score, status, statusColor, icon, onClick }) {
   return (
     <div 
       onClick={onClick}

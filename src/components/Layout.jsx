@@ -1,15 +1,7 @@
 import React from 'react';
-import { LogOut, HelpCircle, LayoutDashboard, User } from 'lucide-react';
+import { LogOut, User } from 'lucide-react';
 
-interface NavbarProps {
-  userRole: 'teacher' | 'student';
-  userName: string;
-  onLogout: () => void;
-  onNavigate: (view: string) => void;
-  currentView: string;
-}
-
-export function Navbar({ userRole, userName, onLogout, onNavigate, currentView }: NavbarProps) {
+export function Navbar({ userRole, userName, onLogout, onNavigate, currentView }) {
   return (
     <nav className="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/10">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">

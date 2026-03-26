@@ -2,11 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { BookOpen, ArrowRight, Chrome, ShieldCheck } from 'lucide-react';
 
-interface LoginProps {
-  onLogin: (role: 'teacher' | 'student') => void;
-}
-
-export function Login({ onLogin }: LoginProps) {
+export function Login({ onLogin }) {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-6 relative overflow-hidden">
       <motion.div 

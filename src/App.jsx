@@ -6,14 +6,11 @@ import { TeacherDashboard } from './components/TeacherDashboard';
 import { SubmissionTracker } from './components/SubmissionTracker';
 import { StudentDashboard } from './components/StudentDashboard';
 
-type View = 'login' | 'teacher-dashboard' | 'submission-tracker' | 'student-dashboard';
-type Role = 'teacher' | 'student' | null;
-
 export default function App() {
-  const [currentView, setCurrentView] = useState<View>('login');
-  const [userRole, setUserRole] = useState<Role>(null);
+  const [currentView, setCurrentView] = useState('login');
+  const [userRole, setUserRole] = useState(null);
 
-  const handleLogin = (role: 'teacher' | 'student') => {
+  const handleLogin = (role) => {
     setUserRole(role);
     setCurrentView(role === 'teacher' ? 'teacher-dashboard' : 'student-dashboard');
   };
@@ -47,7 +44,7 @@ export default function App() {
           userRole={userRole} 
           userName="สมชาย ใจดี" 
           onLogout={handleLogout}
-          onNavigate={(view) => setCurrentView(view as View)}
+          onNavigate={(view) => setCurrentView(view)}
           currentView={currentView}
         />
       )}
